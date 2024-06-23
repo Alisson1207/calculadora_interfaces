@@ -42,5 +42,17 @@ public class Form1 {
                 respuesta.setText(String.valueOf(multiplicacion));
             }
         });
+        division.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double numero1 = Double.parseDouble(primer_numero.getText());
+                double numero2 = Double.parseDouble(segundo_numero.getText());
+                if (numero2 != 0) {
+                    respuesta.setText(String.valueOf(numero1 / numero2));
+                }else{
+                    respuesta.setText("Error, es division para cero");
+                }
+            }
+        });
     }
 }
